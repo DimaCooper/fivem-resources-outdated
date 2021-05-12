@@ -1,0 +1,162 @@
+/*ver 0.90*/
+@charset "UTF-8";
+
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web:400,700);
+
+@font-face {
+	font-family: "Custom Font";
+	src: url(nui://vrp/gui/664_Copyright_House.ttf) format("truetype");
+}
+
+@font-face {
+	font-family: "Money Font";
+	src: url(nui://vrp/gui/pricedown.ttf) format("truetype");
+}
+
+@font-face {
+	font-family: "europe-normal";
+	src: url(nui://vrp/gui/europe-normal.ttf) format("truetype");
+}
+
+@font-face {
+	font-family: 'Open Sans';
+	src: local('Open Sans Light'), local('OpenSans-Light'), url('http://hb.bizmrg.com/fonts/opensans/300.woff2') format('woff2'), url('http://hb.bizmrg.com/fonts/opensans/300.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+}
+
+
+html, body {
+	margin: 0;
+	height: 100%;
+	overflow: hidden;
+	font-size: 2vmin;
+	font-family: 'Open Sans';
+}
+
+div.menu {/*Основной контейнер*/
+	top: 15%;
+	right: 5%;
+	color: #fff;
+	position: fixed;
+	min-width: 20vw;
+	max-width: 35vw;
+	max-height: 55vh;
+	overflow: hidden;
+	font-weight: 100;
+	border-radius: 0.2em;
+	position: absolute;
+	margin: 0!important;
+	border-top: 0.5em solid #2f3e55;
+	border-bottom: 1em solid #2f3e55;
+	background-color: rgba(47, 62, 85, 0.6);
+	/*-moz-user-select: none;*/
+	-webkit-user-select: none;
+	/*-ms-user-select: none;
+	user-select: none;*/
+}
+
+div.menu h1 {/*Название гаража*/
+	font-family: "664_Copyright_House.ttf";
+	background-color: rgba(47, 62, 85,1);
+	color: white;
+	text-align: center;
+	margin: 0!important;
+	font-size: 1.15em;
+	padding-bottom: 0.65em;
+	font-weight: 700;
+	border-radius: 0.2em 0.2em 0 0;
+}
+
+div.menu ul, .breadcrumbs {
+	font-family: sans-serif;
+	min-width: 10%;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+
+div.menu ul {/*Контейнер опций*/
+	list-style-type: none;
+	max-height: 15em;
+}
+
+.breadcrumbs {/*Цепочка навигации*/
+	background-color: rgba(47, 62, 85,1);
+	color: #fff;
+	font-size: 0.5em;
+	font-weight: bold;
+	text-align: left;
+	padding: 1em 1em 1em 2em;
+}
+
+.breadcrumb::before {
+	content: " > ";
+}
+
+div.menu li {/*Отдельная опция*/
+	padding: 0.77em 1.3em;
+	color: #fff;
+	font-size: 0.8em;
+}
+
+.info, .folder, .price, .owned, .repair, .cart, .discard {/*Правый текст опции*/
+	padding-left: 0.3em;
+	float: right;
+}
+
+.folder::before {/*Опция, открывающая подменю*/
+	content: "🗀";
+	font-weight: 900;
+}
+
+.price::before {/*Опция, которая содержит цену > 0*/
+	content: "$";
+}
+
+.owned::before {/*Опция, которая уже установлена*/
+	content: "✔";
+}
+
+.repair::before {/*Опция починки*/
+	content: "🔧";
+}
+
+.cart::before {/*Опция, которая выбрана, но не установлена*/
+	content: "🛒";
+}
+
+.discard::before {/*Опция, которая уже установлена, но выбрана для снятия (только для переключающихся модов)*/
+	content: "✘";
+}
+
+div.menu li.current {
+	background-color: #2f3e55;
+	color: #f13284;
+	border-left: 0.2em solid #f13284;
+}
+
+.infTxtC {
+	width: 100%;
+	bottom: 10%;
+	position: fixed;
+	text-align: center;
+}
+#infTxt {
+	color: white;
+	font-size: 1.7em;
+	padding: 1em 3em;
+	position: relative;
+	border-radius: 0.2em;
+	display: inline-block;
+	background-color: rgba(47, 62, 85, 0.6);
+}
+
+#infTxt span.f1, #infTxt span.f2, #infTxt span.f3 {
+	color: #dd2222;
+	font-weight: bold;
+}
+
+#infTxt span.f2 {
+	color: #2222dd;
+}
