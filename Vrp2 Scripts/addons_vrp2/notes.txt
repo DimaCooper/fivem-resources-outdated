@@ -1,0 +1,46 @@
+*************addons_vrp2************
+
+Find all permissions in the lang file
+
+Features:
+Mobile police computer registration and records search while near PV
+Dynamic Jail/Unjail Options added to Police Computers, permission to have prison options in police menu
+Deployable police options with permissions - spikes, barriers, cones, gazebo, scene light
+Consumable Drugs deach with different effect
+Player Menu containing most options
+vrp menu Players List
+Lockpicking vehicle options
+Vehicle Doors controls options in vehicle menu
+BoomBox Options with permissions
+
+Permissions:
+"police_props", --Add to police to allow police extra menu	
+"player_list", -- Add to use to allow Player List
+"jailer_police_pc", -- Add to police to allow Prison Options in the "police computer"		
+"always_lockpick", --Add to who should be able to lock pick vehicles with no criminal aptitudes
+		
+		[[--Admin or extra options--]],
+		
+"jailer_mobile", -- Add to police to allow Prison Options in the "police menu"		
+"police_props_xtra", --unlimited barriers and scene lights in police extra menu
+"boombox", --Global DJ Option for DJ or Admin
+"no_boombox_req", --no boombox is required in inventory
+		
+		
+Items:
+"lighter", -- Required for Consumables
+"rolly", -- Required for Consumables
+"weed", -- Required for Consumables
+"vodka", -- Required for Consumables
+"cocaine", -- Required for Consumables
+"lsd", -- Required for Consumables
+"methpipe", -- Required for Consumables
+"meth", -- Required for Consumables
+"cigs", -- Required for Consumables
+
+"boom_box", -- Required for Boombox
+"lockpick", -- Required for Lockpicking
+
+
+Aptitudes:
+["addiction"] = {"Drug Dependence", 0, -1} --add aptitude Drug Dependence to physical
