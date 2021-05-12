@@ -1,0 +1,30 @@
+
+
+
+RegisterServerEvent('LockToggle:Lock')
+AddEventHandler('LockToggle:Lock', function()
+local user = vRP.users_by_source[source]
+local model = vRP.EXT.Garage.remote.getNearestOwnedVehicle(user.source, 5)
+    if model then
+
+	vRP.EXT.Garage.remote._vc_toggleLock(user.source, model)
+vRP.EXT.Audio.remote._playAudioSource(-1, "sounds/car-lock.ogg", 0.7, 0,0,0,10, user.source)
+
+
+
+end
+end)
+
+RegisterServerEvent('EngToggle:Engin')
+AddEventHandler('EngToggle:Engin', function()
+local user = vRP.users_by_source[source]
+local model = vRP.EXT.Garage.remote.getNearestOwnedVehicle(user.source, 5)
+    if model then
+	vRP.EXT.Garage.remote._vc_toggleEngine(user.source, model)
+
+
+
+
+end
+end)
+
